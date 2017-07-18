@@ -1,0 +1,56 @@
+@import "../../style/var.style";
+
+.c-dialog-root {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(#000, .5);
+  top: 0;
+  left: 0;
+  transition: all ease .3s;
+  @include flexLayout();
+  .body {
+    width: 70%;
+    min-height: 22%;
+    border-radius: $bank_base_size * .5;
+    background: rgba(252,252,252,.88);//#fff;
+    @include flexLayout(column);
+    justify-content: space-between;
+    align-items: stretch;
+    .msg {
+      flex: 1;
+      padding: .46rem .3rem .3rem .3rem;
+      @include flexLayout(column);
+      font-size: $bank_base_size;
+      * {
+        font-size: $bank_base_size;
+      }
+    }
+    .btns {
+      @include flexLayout();
+      overflow: hidden;
+      > div {
+        border-width: 0 1px 0;
+        border-style: solid;
+        border-color: #d0d0d0;//$bank_border_color;
+        &:first-of-type {
+          border-radius: 0 0 0 $bank_base_size * .5;
+        }
+        &:last-of-type {
+          border: none;
+          border-radius: 0 0 0 $bank_base_size * .5;
+        }
+        flex: 1;
+        height: $bank_base_size * 3;
+        @include flexLayout();
+        * {
+          color: $bank_primary_color;
+          font-size: .32rem;//$bank_base_size * 1.2;
+        }
+      }
+      border-width: 1px 0 0;
+      border-color: $bank_border_color;
+      border-style: solid;
+    }
+  }
+}

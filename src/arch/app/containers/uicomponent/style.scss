@@ -1,0 +1,9 @@
+@import "../../style/var.style";
+
+.container-uicomponent-root{
+    height: 100%;
+    .info{
+        padding: $bank_base_size;
+        text-align: center;
+    }
+}

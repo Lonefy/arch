@@ -1,0 +1,28 @@
+@import "../../style/var.style";
+
+.c-input-root{
+    position: relative;
+    @include flexLayout();
+    input{
+        width: 100%;
+        color: $bank_text_color;
+    }
+    .clear-box{
+        height: 100%;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        padding: 0;
+        top: 0;
+        @include flexLayout();
+    }
+    .clear-btn{
+
+    }
+    .icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include flexLayout();
+    }
+}

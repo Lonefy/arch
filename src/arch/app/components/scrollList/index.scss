@@ -1,0 +1,32 @@
+.scrolllist-root{
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    z-index: 0;
+    .topTip{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: .4rem;
+        line-height: .4rem;
+        padding-top: .3rem;
+        text-align: center;
+        font-size: .24rem;
+        color: #939393;
+        z-index: 10;
+        background: #f2f2f2;
+        &.top{
+            z-index: 11;
+        }
+        &.hide{
+            visibility: hidden;
+        }
+    }
+    .scrolllist-wrapper{
+        position: relative;
+        max-height: initial;
+        z-index: 200;
+        background: #f2f2f2;
+    }
+}

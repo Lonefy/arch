@@ -1,0 +1,30 @@
+@import "../../style/var.style";
+
+
+.c-listloading-root{
+    @include flexLayout();
+    height: 1.2rem;
+    >div{
+        @include flexLayout();
+        .loading_icon{
+            height: .64rem;
+            width: .64rem;
+            background-image: url(./img/icon_loading_2x.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: loading linear 1s infinite ;
+            @keyframes loading {
+                0%{transform:rotate(0deg);}
+                50%{transform:rotate(180deg);}
+                100%{transform:rotate(360deg);}
+            }            
+        }
+        .loading_text{
+            color: #939393;
+            font-size: .24rem;
+            padding-left: .08rem;
+        }
+    }
+
+}

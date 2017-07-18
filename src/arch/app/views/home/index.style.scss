@@ -1,0 +1,101 @@
+@import "../../style/var.style";
+
+.home-root {
+  .account {
+    // height: $bank_base_size * 8;
+    background: #ff6e17;
+    @include flexLayout(column);
+    padding: $bank_base_size * 2;
+    justify-content: space-between;
+    > div {
+      color: #fff;
+      @include flexLayout();
+    }
+    .title{
+        padding-bottom: .3rem; 
+        span{
+            &:first-child{
+                color: rgba(255,255,255,.6);
+                padding-right: .12rem;
+            }
+        }
+    }
+    .amount {
+        padding-bottom: .4rem;
+      >div{
+        font-size: 1rem;
+        font-weight: 200;
+        white-space: nowrap;
+        color: #fff;
+        line-height: 1rem;
+      }
+      overflow: scroll;
+      &::-webkit-scrollbar{
+        display: none;
+      }
+      width: 100%;
+    }
+  }
+  .menus {
+    margin-top: $bank_base_size * 0.7;
+    padding: 0 .24rem;
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    .row{
+        height: 1.35rem;
+        @include flexLayout();
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #e6e6e6;
+        &:last-child{
+            border: none;
+        }
+        .menu {
+            flex: 1;
+            box-sizing: border-box;
+            background: #fff;
+            height: 1.07rem;
+            margin: .12rem 0;
+            padding-top: .1rem;
+            @include flexLayout();
+            align-items: stretch;
+            //   padding: $bank_base_size 0;
+            border-right: 1px solid #e6e6e6;
+            &:last-child{
+                border: none;
+            }
+            &:nth-child(2){
+                padding-left: .24rem;
+            }
+            > div {
+                @include flexLayout(column);
+                justify-content: space-between;
+                &:first-of-type {
+                    // flex: 1;
+                    .label{
+                        margin-right: .12rem;
+                        img{
+                            width: .42rem;
+                        }
+                    }
+                }
+                &:last-of-type {
+                    flex: 3;
+                    align-items: flex-start;
+                    .name{
+                        font-size: .32rem;
+                        padding-bottom: .08rem;
+                    }
+                    .menu-content{
+                        color: $bank_label_color;
+                    }
+                }
+            }
+            .text{
+                justify-content: flex-start;
+            }
+        }        
+    }
+
+  }
+}

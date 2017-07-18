@@ -1,0 +1,20 @@
+@import "../../style/var.style";
+
+$height: 1rem;
+.c-button-root {
+  background: $bank_primary_color;
+  height: .84rem;
+  line-height: .84rem;
+  @include flexLayout();
+  border-radius: .04rem;
+  * {
+    color: #fff;
+    font-size: .34rem;
+  }
+  &.disabled {
+    opacity: .5;
+  }
+  &:not(.disabled):active{
+    -webkit-filter: brightness(.9);
+  }
+}

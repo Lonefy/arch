@@ -1,0 +1,247 @@
+@import "./var.style";
+
+/* 清浮动 */
+.clearfix:after, .clear:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/*radio、checkbox默认样式*/
+input {
+  &[type="checkbox"], &[type="radio"] {
+    position: relative;
+    z-index: 1;
+    border: 0;
+    background: 0 0;
+    -webkit-appearance: none;
+    outline: 0;
+    margin: -0.1rem .05rem 0 0;
+
+  }
+  &[type="checkbox"] {
+    width: .36rem;
+    height: .36rem;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: .34rem;
+      height: .34rem;
+      border: 1px solid #ccc;
+      background-color: #fff;
+    }
+    &:checked:after {
+      position: absolute;
+      top: .06rem;
+      left: .06rem;
+      content: "";
+      width: .26rem;
+      height: .12rem;
+      transform: rotate(-45deg);
+      border-left: .02rem solid #29c944;
+      border-bottom: .02rem solid #29c944;
+    }
+  }
+  &[type="radio"] {
+    width: .34rem;
+    height: .34rem;
+    border-radius: 50%;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: .34rem;
+      height: .34rem;
+      border: .02rem solid #29c944;
+      background: #fff;
+      border-radius: 50%;
+    }
+    &:checked:before {
+      height: 0;
+      width: 0;
+      border: .19rem solid #29c944;
+      border-radius: 50%;
+    }
+    &:checked:after {
+      position: absolute;
+      top: .08rem;
+      left: .06rem;
+      content: "";
+      width: .23rem;
+      height: .12rem;
+      transform: rotate(-45deg);
+      border-left: .03rem solid #fff;
+      border-bottom: .03rem solid #fff;
+    }
+  }
+}
+
+/*通用样式*/
+body {
+  max-width: 7.5rem;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  color: #939393;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent
+}
+
+#root, .content, .view-enter {
+  height: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+}
+
+/*显示隐藏*/
+.hide {
+  display: none
+}
+
+.show {
+  display: block
+}
+
+/*横分割线*/
+.line {
+  border-bottom: $border solid 1px;
+}
+
+/*inline cell 默认字体*/
+// 去除span，react生成大量span影响较大
+a, em, p, div, input, button {
+  font-size: .24rem;
+  color: $txtDefault;
+}
+
+/*常用字号*/
+.f-24 {
+  font-size: .24rem;
+}
+
+.f-28 {
+  font-size: .28rem;
+}
+
+.f-32 {
+  font-size: .32rem;
+}
+
+/*字号莫名变大BUG*/
+div, dt, dd, p, li, h1, h2, h3, h4, h5, h6 {
+  max-height: 100%
+}
+
+/*单行文本*/
+.txt-nowrap {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+.txt-nowrap-multi {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2
+}
+
+/*icon*/
+.ico {
+  display: inline-block;
+  background: no-repeat 50%;
+  background-size: contain;
+  width: .26rem;
+  height: .26rem;
+
+  &.rmb {
+    background-image: url(./img/ico_rmb.png);
+  }
+  &.pay {
+    background-image: url(./img/ico_pay.png);
+  }
+  &.safe {
+    background-image: url(./img/ico_safe.png);
+  }
+  &.alipay {
+    background-image: url(./img/ico_alipay.png);
+  }
+  &.applepay {
+    background-image: url(./img/ico_applepay.png);
+  }
+}
+
+/*默认button样式*/
+.btn {
+  line-height: 1;
+  display: inline-block;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: .24rem;
+  text-align: center;
+  border-radius: .06rem;
+  padding: .15rem;
+  border: 1px solid #ff8200;
+  background: #ff8200;
+  background-image: linear-gradient(to top, #ff8200, #ff890a);
+
+  &.seal {
+    color: #ff8200;
+    background: #fff;
+  }
+  &.large {
+    font-size: .34rem;
+    border-radius: .04rem;
+    padding: .24rem;
+  }
+  &.full {
+    display: block;
+    width: 100%;
+    font-size: .34rem;
+    padding: 0;
+    border-radius: 0;
+    line-height: .88rem
+  }
+  &.disabled {
+    background: #ccc;
+    border: 1px solid #ccc;
+  }
+}
+
+/*图片-背景展示*/
+.layzr-bg {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: no-repeat 50%;
+  background-size: contain;
+}
+
+.card {
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: $bank_border_color;
+}
+
+.error {
+  color: #E14123;
+}
+
+.primary-color{
+  color: $bank_primary_color;
+}
+.base-size{
+  font-size: $bank_base_size;
+}
+.center{
+  @include flexLayout();
+  text-align: center;
+}
