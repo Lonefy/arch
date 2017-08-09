@@ -11,7 +11,6 @@ import 'webpack-zepto';
 import 'swiper';
 
 import '../assets/adaptive.js';
-import '../assets/suda.js';
 import '../assets/c2p.js';
 import './style/index.style.scss';
 

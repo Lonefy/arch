@@ -1,17 +1,17 @@
-import path         from 'path';
-import webpack      from 'webpack';
+import path from 'path';
+import webpack from 'webpack';
 import autoprefixer from 'autoprefixer';
-import precss       from 'precss';
+import precss from 'precss';
 
-const nodeModulesDir  = path.resolve(__dirname, 'node_modules');
-const assetsDir  = path.resolve(__dirname, 'build/arch');
-const jsPath ='http:///arch/';
-// const jsPath ='http://127.0.0.1/arch/';
+const nodeModulesDir = path.resolve(__dirname, 'node_modules');
+const assetsDir = path.resolve(__dirname, 'build/arch');
+const localDev = true;
+const jsPath = localDev ? 'http://localhost/build/arch/' : 'http://domain/arch/';
+
 let config = {
     devtool: 'eval',
     entry: [
-        // 'webpack-dev-server/client?http://localhost:3000',
-        'webpack-dev-server/client?http://127.0.0.1',
+        'webpack-dev-server/client?' + (localDev ? 'http://localhost' : 'http://domain'),
         'webpack/hot/only-dev-server',
         path.resolve(__dirname, 'app/index.js')
     ],
@@ -58,13 +58,15 @@ let config = {
     resolve: {
         extensions: ["", ".js", ".jsx", ".scss", ".json"],
     },
-    // devServer: {
-    //     contentBase: '/',
-    //     host: 'localhost',
-    //     port: 80,
-    //     inline: true,
-    // },
-};
 
+};
+Object.assign(config, localDev && {
+        devServer: {
+            contentBase: '/',
+            host: 'localhost',
+            port: 80,
+            inline: true
+        }
+    })
 export default config;
 

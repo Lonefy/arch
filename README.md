@@ -2,15 +2,6 @@ NodeJs+React+ES6+Webpack+SASS
 ========================================
 
 
-项目页面:
--------
-
-**各页:**
-- 用户注册页面: localhost:3000/signup
-- 用户登陆页面: localhost:3000/signin
-- 用户详情列表页: localhost:3000/admin/user/list
-
-
 项目结构:
 ----
 ```
@@ -24,7 +15,6 @@ NodeJs+React+ES6+Webpack+SASS
 │   │   │   └── app 
 │   │   │       ├── App.jsx 
 │   │   │       └── app.style.scss 
-│   │   ├── models      这里面放的是数据，类似我们模拟接口的 api/xxx.json
 │   │   ├── routes      路由，提供给 app/index.js使用
 │   │   ├── style
 │   │   └── views       各个模块目录

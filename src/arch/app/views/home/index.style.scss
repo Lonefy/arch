@@ -2,10 +2,9 @@
 
 .home-root {
   .account {
-    // height: $bank_base_size * 8;
     background: #ff6e17;
     @include flexLayout(column);
-    padding: $bank_base_size * 2;
+    padding: .26rem;
     justify-content: space-between;
     > div {
       color: #fff;
@@ -37,7 +36,7 @@
     }
   }
   .menus {
-    margin-top: $bank_base_size * 0.7;
+    margin-top: .2rem;
     padding: 0 .24rem;
     background: #fff;
     border-bottom: 1px solid #e6e6e6;
@@ -59,7 +58,6 @@
             padding-top: .1rem;
             @include flexLayout();
             align-items: stretch;
-            //   padding: $bank_base_size 0;
             border-right: 1px solid #e6e6e6;
             &:last-child{
                 border: none;
@@ -87,7 +85,7 @@
                         padding-bottom: .08rem;
                     }
                     .menu-content{
-                        color: $bank_label_color;
+                        color: #939393;
                     }
                 }
             }

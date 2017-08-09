@@ -1,14 +1,11 @@
 {
-  "name": "weibopay",
+  "name": "Arch",
   "version": "0.2.0",
-  "description": "weibopay-frontend",
-  "main": "src/pc/index.js",
+  "description": "subgod-frontend",
   "scripts": {
     "clean": "rm -rf ./build",
-    "h5": "babel-node --presets es2015 ./src/h5/server.dev.reload.js",
-    "h5.build": "NODE_ENV=production webpack -p --config ./src/h5/webpack.production.config.babel.js ",
-    "finance": "babel-node --presets es2015 ./src/finance/server.dev.reload.js",
-    "finance.build": "NODE_ENV=production webpack -p --config ./src/finance/webpack.production.config.babel.js "
+    "arch": "babel-node --presets es2015 ./src/arch/server.dev.reload.js",
+    "arch.build": "NODE_ENV=production webpack -p --config ./src/arch/webpack.production.config.babel.js "
   },
   "keywords": [
     "react",

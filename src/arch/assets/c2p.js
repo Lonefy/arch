@@ -155,16 +155,6 @@ var CoreApi = {
             doc.body.removeChild(iframe);
         }, 1000);
     },
-    suda: function (key, value) {
-        var home = sessionStorage.getItem('sudahome'),
-            value = value || ""
-
-        if (home) {
-            value = home + ":" + value
-        }
-
-        SUDA.uaTrack('fsduobao', key, {ext: value});
-    },
     //是否微博client
     isWebView: function () {
         var ua = navigator.userAgent;

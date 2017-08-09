@@ -110,14 +110,14 @@ body {
 
 /*横分割线*/
 .line {
-  border-bottom: $border solid 1px;
+  border-bottom: #e9e9e9 solid 1px;
 }
 
 /*inline cell 默认字体*/
 // 去除span，react生成大量span影响较大
 a, em, p, div, input, button {
   font-size: .24rem;
-  color: $txtDefault;
+  color: #939393;
 }
 
 /*常用字号*/
@@ -162,85 +162,19 @@ div, dt, dd, p, li, h1, h2, h3, h4, h5, h6 {
   width: .26rem;
   height: .26rem;
 
-  &.rmb {
-    background-image: url(./img/ico_rmb.png);
-  }
-  &.pay {
-    background-image: url(./img/ico_pay.png);
-  }
-  &.safe {
-    background-image: url(./img/ico_safe.png);
-  }
-  &.alipay {
-    background-image: url(./img/ico_alipay.png);
-  }
-  &.applepay {
-    background-image: url(./img/ico_applepay.png);
-  }
 }
 
-/*默认button样式*/
-.btn {
-  line-height: 1;
-  display: inline-block;
-  box-sizing: border-box;
-  color: #fff;
-  font-size: .24rem;
-  text-align: center;
-  border-radius: .06rem;
-  padding: .15rem;
-  border: 1px solid #ff8200;
-  background: #ff8200;
-  background-image: linear-gradient(to top, #ff8200, #ff890a);
-
-  &.seal {
-    color: #ff8200;
-    background: #fff;
-  }
-  &.large {
-    font-size: .34rem;
-    border-radius: .04rem;
-    padding: .24rem;
-  }
-  &.full {
-    display: block;
-    width: 100%;
-    font-size: .34rem;
-    padding: 0;
-    border-radius: 0;
-    line-height: .88rem
-  }
-  &.disabled {
-    background: #ccc;
-    border: 1px solid #ccc;
-  }
-}
-
-/*图片-背景展示*/
-.layzr-bg {
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: no-repeat 50%;
-  background-size: contain;
-}
 
 .card {
   border-width: 1px 0;
   border-style: solid;
-  border-color: $bank_border_color;
+  border-color: #e9e9e9;
 }
 
 .error {
   color: #E14123;
 }
 
-.primary-color{
-  color: $bank_primary_color;
-}
-.base-size{
-  font-size: $bank_base_size;
-}
 .center{
   @include flexLayout();
   text-align: center;

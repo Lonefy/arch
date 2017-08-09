@@ -1,15 +1,16 @@
 @import "../../style/var.style";
+$base_size: .16rem;
 .c-toast-root {
-    width: $bank_base_size * 10;
-    height: $bank_base_size * 7;
-    border-radius: $bank_base_size * .5;
-    padding: $bank_base_size;
+    width: $base_size * 10;
+    height: $base_size * 7;
+    border-radius: $base_size * .5;
+    padding: $base_size;
     @include flexLayout(column);
     .icon {
-        padding-bottom: $bank_base_size * .5;
+        padding-bottom: $base_size * .5;
         i {
-            width: $bank_base_size * 3;
-            height: $bank_base_size * 3;
+            width: $base_size * 3;
+            height: $base_size * 3;
         }
         .icon-loading {
             animation: loading linear 1s infinite;
@@ -27,7 +28,7 @@
         width: 100%;
         height: .8rem;
         text-align: center;
-        font-size: $bank_base_size;
+        font-size: $base_size;
         overflow: hidden;
         // white-space: nowrap;
         text-overflow: ellipsis;
